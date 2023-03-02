@@ -1,13 +1,200 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+  --clr-primary: hsl(220, 98%, 61%);
+  --clr-check: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)) ;
+
+  --clr-dm-bg: hsl(235, 21%, 11%);
+  --clr-dm-card: hsl(235, 24%, 19%);
+  --clr-dm-text: hsl(234, 39%, 85%);
+  --clr-dm-hover: hsl(236, 33%, 92%);
+  --clr-dm-navbar: hsl(234, 11%, 52%);
+  --clr-dm-darkgray: hsl(233, 14%, 35%);
+
+  --clr-lm-card: hsl(0, 0%, 98%);
+  --clr-lm-bg: hsl(236, 33%, 92%)
+  --clr-lm-text: black
+  --clr-lm-navbar: hsl(235, 19%, 35%)
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.App {
+  height: 100vh;
+  background-color: var(--clr-dm-bg);
+  background-image: url("./images/bg-desktop-dark.jpg");
+  background-size: 100% 30%;
+  background-repeat: no-repeat;
+  display: grid;
+}
+
+.app-light {
+  background-color: var(--clr-lm-bg);
+  background-image: url("./images/bg-desktop-light.jpg");
+}
+
+.container {
+  margin: auto;
+  width: 80%;
+  height: 75%;
+  max-width: 600px;
+}
+
+
+@media (max-width: 800px) {
+  .App {
+    background-image: url("./images/bg-mobile-dark.jpg");
+  }
+
+  .app-light {
+    background-image: url("./images/bg-mobile-light.jpg");
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 1em;
+}
+
+.task {
+  background-color: var(--clr-dm-card);
+  border-radius: 5px;
+  border-bottom: 1px solid var(--clr-dm-darkgray);
+  padding: 1.2em;
+  display: flex;
+  align-items: center;
+  color: var(--clr-dm-text);
+}
+
+.task-light {
+  background-color: var(--clr-lm-card);
+  color: var(--clr-lm-text);
+}
+
+.detail {
+  font-size: 1.2rem;
+  width: 100%;
+  overflow-wrap: break-word; 
+}
+
+.deleteButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+.task:hover > .deleteButton {
+  display: block;
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--clr-dm-darkgray);
+  border-radius: 50%;
+  margin-right: 1.2em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox:hover {
+  border: 1px solid var(--clr-dm-hover)
+}
+
+.checkbox-checked {
+  background-image: var(--clr-check);
+}
+
+.detail-checked {
+  color: var(--clr-dm-darkgray);
+  text-decoration:line-through;
+}
+
+.inputTask {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: var(--clr-dm-text);
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.inputTask:focus::placeholder {
+  color: transparent;
+}
+
+.tasklist {
+  border-radius: 5px;
+  margin-top: 1.5em;
+  max-height: 75%;
+  overflow-y: hidden;
+}
+
+.tasklist:hover {
+  overflow-y: auto;
+}
+
+.navbar {
+  background-color: var(--clr-dm-card);
+  border-radius: 5px;
+  border-top: 1px solid var(--clr-dm-darkgray);
+  width: 100%;
+  height: 3em;
+  padding: 1em;
+  color: var(--clr-dm-navbar);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-light {
+  background-color: var(--clr-lm-card);
+  color: var(--clr-lm-navbar);
+}
+
+.filter {
+  display: flex;
+  gap: 1em;
+}
+
+.navbarButton {
+  background-color: transparent;
+  border: none;
+  color: var(--clr-dm-navbar);
+  cursor: pointer;
+  font-weight: var(--fw-bold);
+}
+
+.navbarButton:hover {
+  color: var(--clr-dm-hover);
+}
+
+.clicked {
+  color: var(--clr-primary);
+}
+
+
