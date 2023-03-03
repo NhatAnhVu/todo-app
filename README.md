@@ -34,3 +34,9 @@ Users should be able to:
 - How to make interactive features using Reactjs
 - Learn CSS skills
 - How to use Firebase with the projec
+
+### Continued development
+
+- Drag and drop to reorder items on the list
+- Edit task
+- login to show todos for each user
