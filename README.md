@@ -34,6 +34,7 @@ Users should be able to:
 
 - How to make interactive features using Reactjs
 - Learn CSS skills
+- Learn to manage files and folders structure for a project
 - How to use Firebase with the project (CRUD)
 
 ### Continued development
