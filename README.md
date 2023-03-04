@@ -16,7 +16,8 @@ Users should be able to:
 - Toggle light and dark mode
 
 ### Screenshot
-./images/screenshot.png
+![scrennshot](https://user-images.githubusercontent.com/126160990/222886560-57590e41-d561-47f2-a0bd-a54fb32233eb.png)
+
 
 ### Links
 
