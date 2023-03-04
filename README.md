@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Screenshot
 <img src="https://user-images.githubusercontent.com/126160990/222886560-57590e41-d561-47f2-a0bd-a54fb32233eb.png" width="40%">
-<img src="https://user-images.githubusercontent.com/126160990/222886560-57590e41-d561-47f2-a0bd-a54fb32233eb.png](https://user-images.githubusercontent.com/126160990/222907293-4bc46be7-d995-4102-89b8-453558e530a5.png" width="40%">
+<img src="https://user-images.githubusercontent.com/126160990/222907293-4bc46be7-d995-4102-89b8-453558e530a5.png" width="40%">
 
 
 ### Links
