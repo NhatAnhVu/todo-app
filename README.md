@@ -34,7 +34,7 @@ Users should be able to:
 
 - How to make interactive features using Reactjs
 - Learn CSS skills
-- How to use Firebase with the projec
+- How to use Firebase with the project (CRUD)
 
 ### Continued development
 
